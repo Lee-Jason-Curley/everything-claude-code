@@ -1,8 +1,12 @@
-# Copy agents
+# My Environment Setup
+
+Execute the following in Powershell to get everything up and running.
+
+## Copy agents
 New-Item -ItemType Directory -Path "C:\Users\clari\.claude\agents" -Force
 Copy-Item -Path "./agents/*.md" -Destination "C:\Users\clari\.claude\agents" -Force
 
-# Copy rules
+## Copy rules
 New-Item -ItemType Directory -Path "C:\Users\clari\.claude\rules" -Force
 Copy-Item -Recurse "./rules/common"      "C:\Users\clari\.claude\rules" -Force
 Copy-Item -Recurse "./rules/csharp"  "C:\Users\clari\.claude\rules" -Force
@@ -11,6 +15,6 @@ Copy-Item -Recurse "./rules/rust"      "C:\Users\clari\.claude\rules" -Force
 Copy-Item -Recurse "./rules/typescript"         "C:\Users\clari\.claude\rules" -Force
 Copy-Item -Recurse "./rules/web"         "C:\Users\clari\.claude\rules" -Force
 
-# Copy skills
+## Copy skills
 Copy-Item -Recurse "./skills/search-first" "C:\Users\clari\.claude\skills" -Force
 Copy-Item -Recurse "./.agents/skills/*" "C:\Users\clari\.claude\skills" -Force
